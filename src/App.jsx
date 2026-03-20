@@ -1,20 +1,19 @@
-import { Link } from "react-router";
+import Profile from "./Profile"
+import { Link } from "react-router"
+import { Lola } from "./Lola"
 
-
-const App = () => {
-  return (
+ export const App = () => {
+   
+    return (
     <div>
-      <h1>Hello from the main page of the app!</h1>
-      <p>Here are some examples of links to other pages</p>
-      <nav>
-        <ul>
-          <li>
-            <Link to="profile">Profile page</Link>
-          </li>
-        </ul>
-      </nav>
+        <h1>Main menu</h1>
+        <p>odavde imas link na druge stranice</p>
+<nav><Link to="profile"> Idi na profil </Link>
+<Link to="lola"> idi na lola </Link>
+</nav>
+      <ul>
+       
+      </ul>
     </div>
-  );
-};
-
-export default App;
+    )
+ }

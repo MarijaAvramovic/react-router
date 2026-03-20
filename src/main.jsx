@@ -1,21 +1,25 @@
 import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-
+import { createRoot } from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from "react-router";
-import Profile from './Profile.jsx';
-import App from './App.jsx'
-import Spinach from './Spinach.jsx';
-import Popeye from './Popeye.jsx';
-import DefaultProfile from './DefaultProfile.jsx';
-import ErrorPage from './ErrorPage.jsx';
-import routes from './Routrs.jsx';
- 
+import Profile from "./Profile";
+import App from './App'
 
-const router = createBrowserRouter(routes);
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <h2>Jebo te router</h2>
+  },
+  {
+    path:"profile",
+    element: <Profile />
+  }
+])
+ 
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
+  <RouterProvider router={router} />
 
-    <RouterProvider router={router}/>
   </StrictMode>,
 )

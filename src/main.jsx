@@ -7,19 +7,17 @@ import App from './App.jsx'
 import Spinach from './Spinach.jsx';
 import Popeye from './Popeye.jsx';
 import DefaultProfile from './DefaultProfile.jsx';
+import ErrorPage from './ErrorPage.jsx';
 
 const router = createBrowserRouter([
   {path: "/",
-    element: <App />
+    element: <App />,
+    errorElement: <ErrorPage />,
   },
   {
-    path: "profile",
-    element: <Profile />,
-    children: [
-      {index: true, element: <DefaultProfile />},
-      {path: "spinach", element: <Spinach />},
-      {path: "popeye", element: <Popeye />}
-    ],
+    path: "profile/:name",
+    element: <Profile />, 
+   
   }
 ]);
 

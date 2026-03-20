@@ -1,6 +1,6 @@
 import { useState } from 'react'
-
 import './App.css'
+import { Link } from 'react-router';
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
       <nav>
         <ul>
           <li>
-            <a href="profile">Profile page</a>
+            <Link to="profile">Profile page</Link>
           </li>
         </ul>
       </nav>
